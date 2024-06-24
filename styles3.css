@@ -17,6 +17,14 @@ header {
     position: relative;
 }
 
+.filosofia {
+    background: rgba(255, 255, 255, 0.8); /* Fondo claro para el texto */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .header-content {
     padding: 10px 20px;
     display: flex;
@@ -98,23 +106,3 @@ main {
     .dropbtn:hover {
         background-color: #5e3a3a;
     } 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #47141D;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .logo-ipn, .logo, .logo-escom {
-        height: 60px;
-    }
-}
