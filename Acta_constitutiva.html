@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acta Constitutiva - Escom Burritos</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./Imagenes/PNG LOGO IPN.png" alt="Logo IPN" class="logo-ipn">
+            <img src="./Imagenes/LOGO BURRITOS.jpg" alt="ESCOM Burritos Logo" class="logo">
+            <img src="./Imagenes/LOGO ESCOM PNG.png" alt="Logo ESCOM" class="logo-escom">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Más</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="acta">
+            <h1>Acta Constitutiva de Escom Burritos, S.C.</h1>
+            <p>Este documento oficial marca la creación de "Escom Burritos, Sociedad Cooperativa de Responsabilidad Limitada", establecida el 23 de febrero de 2024 en la Ciudad de México.</p>
+            <h2>Aspectos Clave</h2>
+            <ol>
+                <li>Confirmación de asistencia y verificación de la identidad de los fundadores.</li>
+                <li>Definición del objeto social, capital inicial y estructura de gestión.</li>
+                <li>Formalización de la dirección de la sociedad y establecimiento del marco operativo.</li>
+                <li>Descripción detallada de los derechos y obligaciones de cada socio.</li>
+            </ol>
+            <h2>Detalles Específicos</h2>
+            <p>La sociedad inicia con un capital de 60,000 MXN destinados a la operación de venta de burritos. El domicilio oficial es en Av. Juan de Dios Bátiz, y los administradores electos son Miguel Ángel Cisneros González y Lizbeth Alejandra Gutiérrez Pérez.</p>
+            <p>La cooperativa se enfoca en la venta, preparación y distribución de burritos, buscando innovar en el mercado gastronómico de la Ciudad de México.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Escom Burritos, Sociedad Cooperativa. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const nav = document.querySelector('nav');
+            const header = document.querySelector('header');
+    
+            function adjustNav() {
+                const headerHeight = header.offsetHeight;
+                if (window.pageYOffset > headerHeight) {
+                    nav.classList.add('fixed');
+                    nav.style.top = "0"; // Fija el nav en la parte superior
+                } else {
+                    nav.classList.remove('fixed');
+                    nav.style.top = headerHeight + "px"; // Mantén el nav debajo del header
+                }
+            }
+    
+            window.addEventListener('scroll', adjustNav);
+            adjustNav(); // Llama inicialmente para establecer la posición correcta
+        });
+    </script>
+</body>
+</html>

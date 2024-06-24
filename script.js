@@ -1,13 +1,18 @@
-// Script para manejar la interactividad, como un menú responsivo
-document.addEventListener('DOMContentLoaded', function() {
-    const navElements = document.querySelectorAll('nav ul li a');
-    navElements.forEach(el => {
-        el.addEventListener('click', function() {
-            const sectionToGo = document.querySelector(this.getAttribute('href'));
-            window.scrollTo({
-                top: sectionToGo.offsetTop,
-                behavior: 'smooth'
-            });
-        });
-    });
+window.addEventListener('DOMContentLoaded', (event) => {
+    const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
+    
+    function adjustNav() {
+        const headerHeight = header.offsetHeight; // Se recalcula cada vez que se llama a la función
+        if (window.pageYOffset > headerHeight) {
+            nav.classList.add('fixed');
+            nav.style.top = "0px"; // Posiciona la barra de navegación en la parte superior
+        } else {
+            nav.classList.remove('fixed');
+            nav.style.top = `${headerHeight}px`; // Mantiene la barra debajo del encabezado
+        }
+    }
+
+    window.addEventListener('scroll', adjustNav);
+    adjustNav(); // Llama inicialmente para establecer la posición correcta
 });

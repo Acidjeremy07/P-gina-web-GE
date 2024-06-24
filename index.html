@@ -3,39 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escom Burritos, S.C.</title>
+    <title>ESCOM Burritos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="logo_ipn.png" alt="Logo IPN" class="logo-ipn">
-        <img src="logo_escom.png" alt="Logo ESCOM" class="logo-escom">
-        <div class="hero">
-            <img src="logo_principal.png" alt="Escom Burritos, S.C." class="logo-main">
-            <p>Slogan: Burritos al servicio de la panza</p>
+        <div class="header-content">
+            <img src="./Imagenes/PNG LOGO IPN.png" alt="Logo IPN" class="logo-ipn">
+            <img src="./Imagenes/LOGO BURRITOS.jpg" alt="ESCOM Burritos Logo" class="logo">
+            <img src="./Imagenes/LOGO ESCOM PNG.png" alt="Logo ESCOM" class="logo-escom">
         </div>
-    </header>
-    <nav>
-        <div class="nav-container">
+        <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#conocenos">Conócenos</a></li>
-                <li><a href="#filosofia">Filosofía Organizacional</a></li>
-                <li><a href="#estructura">Estructura Organizacional</a></li>
-                <li><a href="#innovacion">Innovación y Tecnología</a></li>
-                <li><a href="#normativo">Marco Normativo</a></li>
-                <li><a href="#responsabilidad">Responsabilidad Social</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Acerca de</a>
+                    <div class="dropdown-content">
+                        <a href="./Acta_constitutiva.html">Acta constitutiva</a>
+                        <a href="#mision">Misión</a>
+                        <a href="#vision">Visión</a>
+                        <a href="#valores">Valores</a>
+                    </div>
+                </li>
+                <li><a href="#">Más</a></li>
             </ul>
-            <img src="./Imagenes/LOGO BURRITOS MIN.jpg" alt="Escom Burritos Minimal Logo" class="logo-minimal">
+        </nav>
+    </header>    
+    <div class="cover-section">
+        <div class="cover-content">
+            <h1>Proyectos estratégicos y toma de decisiones</h1>
+            <p>Unidad de aprendizaje: Gestión empresarial</p>
+            <h2>ESCOM Burritos</h2>
+            <h3>Equipo 6</h3>
+            <ul>
+                <li>Cazares Cruz Jeremy Sajid</li>
+                <li>Cisneros González Miguel Ángel</li>
+                <li>Gutiérrez Pérez Lizbeth Alejandra</li>
+                <li>Miranda Estrada Aldo Francisco</li>
+                <li>Rangel Méndez Alejandro Emanuel</li>
+                <li>Torres Díaz Raymundo</li>
+                <li>Villegas Navarrete Sonia</li>
+            </ul>
+            <p>25 de junio de 2024</p>
         </div>
-    </nav>
-    <div id="conocenos" class="section">
-        <h2>Conócenos</h2>
-        <p>Información sobre la filosofía, estructura y división de trabajo de Escom Burritos, S.C.</p>
     </div>
+    <body>
+        <div class="giro">
+            <center>
+            <img src="./Imagenes/LOGO BURRITOS.jpg" alt="ESCOM burritos" class="logo2"
+            height="250">
+            </center>
+        </div>
+        <div class="section-giro">
+            <div class="content-giro">
+                <h1>Burritos Al Servicio de la Panza</h1>
+                <p>La empresa se especializa en la preparación y venta de una amplia variedad de burritos, 
+                    ofreciendo opciones creativas y sabrosas para satisfacer los gustos más exigentes. 
+                    Nuestro enfoque se centra en la calidad de los ingredientes, la frescura de los productos 
+                    y la atención al detalle en cada preparación. Nos esforzamos por ofrecer una experiencia 
+                    culinaria única, donde nuestros clientes puedan disfrutar de deliciosos burritos en un 
+                    ambiente acogedor y amigable. Nuestro compromiso con la excelencia nos impulsa a buscar 
+                    constantemente nuevas formas de innovar en nuestros sabores y técnicas, asegurando que cada 
+                    bocado sea una experiencia memorable.</p>
+            </div>
+        </div>
+    </body>
     <footer>
-        <p>&copy; 2024 Escom Burritos, S.C. Todos los derechos reservados.</p>
+        <p>Burritos al servicio de la panza</p>
     </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const nav = document.querySelector('nav');
+            const header = document.querySelector('header');
+    
+            function adjustNav() {
+                const headerHeight = header.offsetHeight;
+                if (window.pageYOffset > headerHeight) {
+                    nav.classList.add('fixed');
+                    nav.style.top = "0"; // Fija el nav en la parte superior
+                } else {
+                    nav.classList.remove('fixed');
+                    nav.style.top = headerHeight + "px"; // Mantén el nav debajo del header
+                }
+            }
+    
+            window.addEventListener('scroll', adjustNav);
+            adjustNav(); // Llama inicialmente para establecer la posición correcta
+        });
+    </script>
+    
 </body>
 </html>
