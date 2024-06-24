@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misión y Visión - Escom Burritos</title>
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./Imagenes/PNG LOGO IPN.png" alt="Logo IPN" class="logo-ipn">
+            <img src="./Imagenes/LOGO BURRITOS.jpg" alt="ESCOM Burritos Logo" class="logo">
+            <img src="./Imagenes/LOGO ESCOM PNG.png" alt="Logo ESCOM" class="logo-escom">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Acerca de</a>
+                    <div class="dropdown-content">
+                        <a href="./Acta_constitutiva.html">Acta constitutiva</a>
+                        <a href="./Filosofía.html">Filosofía Organizacional</a>
+                        <a href="./Estructura.html">Estructura Organizacional</a>
+                        <a href="./Cultura.html">Cultura Organizacional</a>
+                    </div>
+                </li>
+                <li><a href="#">Más</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="informacion">
+            <h1>Misión</h1>
+            <p>Proveer burritos deliciosos y nutritivos, elaborados con ingredientes frescos y de alta calidad, mientras fomentamos el desarrollo económico y social de nuestros socios y comensales.</p>
+            <h1>Visión</h1>
+            <p>Ser la primera elección de los amantes de los burritos, reconocidos por nuestro compromiso con la calidad, la sostenibilidad y el impacto positivo en la comunidad, manteniendo nuestro modelo cooperativo como un ejemplo de éxito empresarial inclusivo.</p>
+            <h1>Objetivo General</h1>
+            <p>Convertirnos en una marca de burritos admirada y confiable, ofreciendo una amplia gama de deliciosas opciones que satisfagan todos los gustos.</p>
+            <h2>Objetivos Específicos</h2>
+            <ul>
+                <li>Ofrecer una amplia variedad de burritos para satisfacer los gustos y necesidades de nuestros clientes.</li>
+                <li>Mantener altos estándares de calidad en todos los aspectos de nuestra operación.</li>
+                <li>Generar beneficios económicos equitativos para todos nuestros socios.</li>
+                <li>Contribuir activamente al desarrollo de nuestras comunidades a través de programas y acciones sociales y ambientales responsables.</li>
+                <li>Expandir nuestra presencia en nuevos mercados, manteniendo siempre nuestra identidad cooperativa y nuestros valores fundamentales.</li>
+            </ul>
+            <h2>Políticas</h2>
+            <ul>
+                <li>Los empleados pueden consumir los mismos alimentos preparados dentro de la empresa, limitado a un platillo completo al día.</li>
+                <li>Participar activamente en iniciativas que beneficien el desarrollo económico, social y ambiental de nuestra comunidad.</li>
+                <li>Buscar un crecimiento constante y sostenible, asegurando que cada nueva apertura de local contribuya positivamente a la comunidad y al medio ambiente.</li>
+            </ul>
+            <h2>Reglas</h2>
+            <ul>
+                <li>Los colaboradores deben estar presentes en el horario de atención establecido por la empresa.</li>
+                <li>Todo momento deben estar presentables portando la vestimenta correspondiente al área de operación de cada colaborador.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Escom Burritos, Sociedad Cooperativa. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const nav = document.querySelector('nav');
+            const header = document.querySelector('header');
+    
+            function adjustNav() {
+                const headerHeight = header.offsetHeight;
+                if (window.pageYOffset > headerHeight) {
+                    nav.classList.add('fixed');
+                    nav.style.top = "0"; // Fija el nav en la parte superior
+                } else {
+                    nav.classList.remove('fixed');
+                    nav.style.top = headerHeight + "px"; // Mantén el nav debajo del header
+                }
+            }
+    
+            window.addEventListener('scroll', adjustNav);
+            adjustNav(); // Llama inicialmente para establecer la posición correcta
+        });
+    </script>
+</body>
+</html>
